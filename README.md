@@ -5,56 +5,56 @@
 ---
 
 
-1. Opan Api.Core Project using [visual Stiduo](https://visualstudio.microsoft.com/downloads/ 'Visual Studio').  
-2. Open `Solution Explorer` Then Go to `transition.Entities` > `EntityClass` \
+1. Open API.Core Project using [visual Studio](https://visualstudio.microsoft.com/downloads/ 'Visual Studio').  
+2. Open `Solution Explorer` and go to `transition.Entities` > `EntityClass` \
 ![SolutionExplorer.jpg](SolutionExplorer.jpg "SolutionExplorer.jpg")
 
-3. Create Your Entity Class File Inside Area Folder. eg:- in above Image `Example.cs` is Entity class File. and `UIManual` Is Area Name.
-    - Click [here](#entity-class) to learn, How to Creact Entity Class File.
+3. Create your entity class file inside Area folder. eg:- in above Image `Example.cs` is entity class file and `UIManual` is Area name.
+    - Click [here](#entity-class) to learn how to create Entity class file.
 
-4. After Creating Entity Class File. Then Build `transition.ScaffolderUI`. \
+4. After creating Entity class file, build `transition.ScaffolderUI`. \
 ![ScaffoldBuild.jpg](ScaffoldBuild.jpg "ScaffoldBuild.jpg")
 
-5. If you Want to Change the Database name then Open `appsettings.Development.json` file Then Make changes in the ConnectionString.
+5. If you want to change the Database name then open the` appsettings.Development.json` file and make changes in the ConnectionString.
 
 ## &nbsp;
 
 ## Step 2 Run The Scaffolder 
 ---
-6. After Building Project Run `transition.ScaffolderUI` \
+6. After building the project successfully, run `transition.ScaffolderUI` \
 ![RunScafolder.jpg](RunScafolder.jpg "RunScafolder.jpg")
 
-7. After Succesfully Run. It show Scaffolder UI As Shown in below.\
+7. After succesfull run, It will show the Scaffolder UI as below.\
 ![NewScaffolderScreen.jpg](NewScaffolderScreen.jpg "NewScaffolderScreen.jpg")
 
-8. In Scaffolder UI 1st We have to select WebUI project Folder.
-9. Now In `Select Area` Section You can able to see the Area name Which We created in Point 4. When We select Area name then inside `select Entities` we can able to see the Entity names which we created. 
+8. In Scaffolder UI, select WebUI project folder in the UI path.( no need to select API path as it is selected by default)
+9. Now in the `Select Area` section, you should be able to see the Area name which we had created in Point 4. When we select Area name, then inside `select Entities` we should be able to see the Entity names which we had created previously. 
 ![FilledScaffolderScreen.jpg](FilledScaffolderScreen.jpg "FilledScaffolderScreen.jpg")
 
-10. After Selecting Area name and Entity. Select the functionality.
-    * `Scaffold UI` - Check if you want to scaffold ui.
+10. After selecting Area name and Entity, select the functionality.
+    * `Scaffold UI` - Check if you want to scaffold UI.
     * `Scaffold API` - Check if you want to scaffold API.
-    * `Run migration` - check if you are scaffolding for 1st time or added/removed column form entity class file. it will create table or add/update column or relations into database.
-    * `Select Parent` - If you are scaffolding Child Entity then you can select parent for that entity.
-    * `Scafold Child` - If you want child also get scafolded. while scafolding some parent entity then check this.
+    * `Run migration` - Check if you are scaffolding for the first time or added/removed the column from the entity class file. It will create the table or add/update columns or relations into the database.
+    * `Select Parent` - If you are scaffolding child entity then you can select a parent for that entity.
+    * `Scaffold Child` - If you want child entity should also get scaffolded while scaffolding some parent entity then check this.
 
 
-11. After Selecting functionalities. press Scaffold button and wait until it get completed.
+11. After selecting functionalities, press the Scaffold button and wait until it gets completed.
 
-12. after scaffolding get completed. Stop the `transition.scaffolderUI` and then build `transition.API`  and run it in similar way we build & run `transition.ScaffolderUI`.
+12. After scaffolding gets completed, stop the `transition.scaffolderUI` and then build `transition.API`  and run it in a similar way as we had built & run `transition.ScaffolderUI`.
 
-13. While `Transition.API` is runing. open WebUI Project on [visual studio code](https://code.visualstudio.com/ "visual studio code") (recommended)
+13. While `Transition.API` is running, open WebUI project on [visual studio code](https://code.visualstudio.com/ "visual studio code") (recommended)
 
-14. make sure that changes have done after scaffolding
+14. Make sure that changes have been done after scaffolding.
 
-15. Run the Project on terminal using `ng serve` command.
+15. Run the Project on the terminal using the `ng serve` command.
 
-16. In WebUI open `env.json` file and make sure baseURL is pointing to `https://localhost:44360/api`
+16. In WebUI open the `env.json` file and make sure baseURL is pointing to `https://localhost:44360/api`
 
-17. After Running Api and WebUI Successfully. open browser and test check the changes on `https://localhost:4200`
+17. After running API and WebUI successfully, open the browser and check the changes on `https://localhost:4200`
 
 >## NOTE
-> If You face any error during in above process. Please contact to Developer
+> If you face any error during above process, Please contact to the Development team.
 
 
 
@@ -64,14 +64,14 @@
 ## Entity Class
 ---
 
-To Create Entity class file, Open `Solution Explorer` Then Go to `transition.Entities` > `EntityClass` \
+To create entity class file, Open `Solution Explorer`. Then go to `transition.Entities` > `EntityClass` \
 ![SolutionExplorer.jpg](SolutionExplorer.jpg "SolutionExplorer.jpg")
 
-in Above Screen, Folder under EntityClasses Folder Is known as Area Name.\
-if you want create new Area then create New Folder under EntityClasses.\
-inside that Area Folder create Entity class file as `EntityName.cs`.
+In the above screen, the folder under EntityClasses is known as Area Name.\
+If you want to create a new Area, then create new folder under EntityClasses.\
+Inside the Area folder, create entity class file as `EntityName.cs`.
 #### &nbsp;
-## Step To wite Entity Class file
+## Steps To write Entity Class file
 
 ```c#
 namespace Transition.Entities
@@ -94,11 +94,11 @@ namespace Transition.Entities
     }
 }
 ```
-Above code is tha basic structure of entity class file. which has string Property With Uihint of LongString.
+The above code is the basic structure of the entity class file, which has string Property with UIhint as LongString.
 
-So, As Per our Requirement we have to add property fields which we have to use.
+As per our requirement, we could add property fields which we have to use.
 
-Type For Property fields will differentiate with the Help of UIHint eg:
+Type for Property fields will be differentiated with the help of UIHint, eg:
 
 
 | Property Field Type| | Corresponding UI Hint |
@@ -110,27 +110,27 @@ Type For Property fields will differentiate with the Help of UIHint eg:
 | toggle check box | | CheckToggle |
 | DropDown | | Dropdown |
 
-Above are the few example of property name having UIHint.
+Above are the few examples of Property names having UIHint.
 
-we have Many more type of UIHint which you can see in `UIHint.cs` file. which  is located at 
+We have more UIHints which you could see in `UIHint.cs` file, located at 
 > `transition.Entities` > `Enums` > `Lookups` > `UIHint.cs`
 
-If You Want to make property Field to Required. then Only write ` [Required]` above the UIHint as shown in code otherwise no need to write ` [Required]`.
+If you want to make property field as Required, then only write ` [Required]` above the UIHint as shown in code otherwise no need to write ` [Required]`.
 
 >## NOTE
-> We have `Example.cs` Where We have Use Example Of All controls We have.
-> You can find `Example.cs` at
+> We have `Example.cs` class file where we have use example of all controls we have.
+> You could find `Example.cs` at
 >
 >   `transition.Entities` > `EntityClasses` > `UIManual` > `Example.cs` 
 
 #### &nbsp;
 ## Step To Create Lookup file
 
-If You wanted to add Lookup Then you have to create Lookup File at 
+If you wanted to add Lookup, then you have to create a Lookup File at 
 
  > `transition.Entities` > `Enums` > `Lookups` 
 
- Create a new File Under Lookups eg-  `TestLookup.cs`
+ Create a new file under Lookups eg-  `TestLookup.cs`
 
  `TestLookup.cs`
  ```C#
@@ -152,4 +152,4 @@ namespace Transition.Entities.Enums.Lookups
 }
  ```
 
-Above Are the Example Of How to write Lookup File.
+Above is the example of how to write a Lookup File.
